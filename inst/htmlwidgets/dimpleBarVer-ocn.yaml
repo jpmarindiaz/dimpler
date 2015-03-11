@@ -1,0 +1,16 @@
+dependencies:
+  - name: d3
+    version: 3.5.5
+    src: htmlwidgets/lib/d3-3.5.5
+    script: 
+      - d3.min.js
+  - name: dimple
+    version: 2.1.2
+    src: htmlwidgets/lib/dimple-2.1.2
+    script: 
+      - dimple.v2.1.2.min.js
+meta:
+  - dtype: 
+      - OCN
+      - C
+      - DN

@@ -1,0 +1,24 @@
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 590, 400);
+    var data = [
+    {"order":"5","category":"1","value":10},
+    {"order":"4","category":"2","value":30},
+    {"order":"3","category":"3","value":10},
+    {"order":"2","category":"4","value":40},
+    {"order":"1","category":"5","value":1},
+    ]
+    var myChart = new dimple.chart(svg, data);
+
+    console.log(myChart)
+
+    myChart.setBounds(60, 30, 510, 305)
+    var x = myChart.addCategoryAxis("x", "category");
+    //x.addOrderRule("order");
+    myChart.addMeasureAxis("y", "value");
+    myChart.addSeries(null, dimple.plot.bar);
+    myChart.draw();
+  </script>
+</div>

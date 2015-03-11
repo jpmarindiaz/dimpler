@@ -1,0 +1,11 @@
+Package: dimpler
+Type: Package
+Title: Interface to dimple.js object-oriented API for business analytics
+Version: 1.0
+Date: 2015-03-05
+Author: Juan Pablo Marín Díaz
+Maintainer: Juan Pablo Marín Díaz <jpmarindiaz@gmail.com>
+Description: Interface to dimple.js object-oriented API for business analytics
+License: MIT + file LICENSE
+Imports:
+    htmlwidgets (>= 0.3), yaml

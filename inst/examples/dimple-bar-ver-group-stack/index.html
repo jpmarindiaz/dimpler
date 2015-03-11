@@ -1,0 +1,29 @@
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 590, 400);
+    var data = [
+    {"order":"3","category1":"1","category2":"A","category3":"x","value":10},
+    {"order":"3","category1":"1","category2":"A","category3":"y","value":30},
+    {"order":"1","category1":"1","category2":"A","category3":"z","value":10},
+    {"order":"1","category1":"1","category2":"B","category3":"x","value":40},
+    {"order":"2","category1":"2","category2":"A","category3":"x","value":15},
+    {"order":"3","category1":"2","category2":"A","category3":"z","value":10},
+    {"order":"3","category1":"2","category2":"B","category3":"y","value":30},
+    {"order":"1","category1":"2","category2":"B","category3":"z","value":10},
+    {"order":"1","category1":"3","category2":"B","category3":"x","value":40},
+    {"order":"2","category1":"3","category2":"B","category3":"z","value":15},
+    ]
+    var myChart = new dimple.chart(svg, data);
+    myChart.setBounds(60, 30, 510, 305)
+    var x = myChart.addCategoryAxis("x", ["category1","category2"]);
+    // x.addOrderRule("order");
+    myChart.addMeasureAxis("y", "value");
+    myChart.addSeries("category3", dimple.plot.bar);
+    myChart.addLegend(60, 10, 510, 20, "right");
+    myChart.draw();
+
+
+  </script>
+</div>
