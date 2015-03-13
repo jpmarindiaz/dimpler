@@ -1,0 +1,145 @@
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 590, 400);
+    var data= [
+ {
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "H" 
+},
+{
+ "Cat1": "F",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "H" 
+},
+{
+ "Cat1": "E",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "J" 
+},
+{
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "G",
+"Cat2": "I" 
+},
+{
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "J" 
+},
+{
+ "Cat1": "F",
+"Cat2": "J" 
+},
+{
+ "Cat1": "F",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "H" 
+},
+{
+ "Cat1": "G",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "I" 
+},
+{
+ "Cat1": "F",
+"Cat2": "H" 
+},
+{
+ "Cat1": "F",
+"Cat2": "H" 
+},
+{
+ "Cat1": "F",
+"Cat2": "H" 
+},
+{
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "H" 
+},
+{
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "G",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "J" 
+},
+{
+ "Cat1": "E",
+"Cat2": "J" 
+},
+{
+ "Cat1": "G",
+"Cat2": "H" 
+},
+{
+ "Cat1": "E",
+"Cat2": "H" 
+},
+{
+ "Cat1": "G",
+"Cat2": "I" 
+} 
+];
+var colIds= [ "a", "b" ];
+var colNames= [ "Cat1", "Cat2" ] ;
+
+
+
+
+    var myChart = new dimple.chart(svg, data);
+
+    console.log(myChart)
+
+    myChart.setBounds(60, 30, 510, 305)
+    var x = myChart.addPctAxis("x", colNames[0]);
+    //x.addOrderRule("order");
+    myChart.addCategoryAxis("y", colNames[1],colNames[0]);
+    myChart.addSeries(colNames[0], dimple.plot.bar);
+    myChart.draw();
+  </script>
+</div>

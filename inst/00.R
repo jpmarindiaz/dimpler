@@ -6,6 +6,40 @@ library(htmlwidgets)
 devtools::install()
 library(dimpler)
 
+data <- read.csv("inst/data/dataCCCN.csv")
+dimpler(data, "dimpleBubble-cccn")
+dimpler(data[c(3,1,2,4)], "dimpleBubble-cccn")
+
+
+data <- read.csv("inst/data/dataCCC.csv")
+dimpler(data, "dimplePoints-ccc")
+dimpler(data, "dimpleMatrix-ccc")
+dimpler(data[c(3,2,1)], "dimpleMatrix-ccc")
+dimpler(data[c(2,3,1)], "dimpleMatrix-ccc")
+dimpler(data[c(3,1,2)], "dimpleMatrix-ccc")
+dimpler(data[c(1,3,2)], "dimpleMatrix-ccc")
+dimpler(data[c(1,2,3)], "dimpleMatrix-ccc")
+dimpler(data[c(2,1,3)], "dimpleMatrix-ccc")
+
+
+
+
+data <- read.csv("inst/data/dataCC.csv")
+dimpler(data,"dimpleBarVer-cc")
+
+data <- ddply(data, .(Cat2,Cat1), nrow)
+
+dimpler(data,"dimpleAreaHorFac-ccn")
+dimpler(data,"dimpleAreaVerFac-ccn")
+dimpler(data,"dimpleAreaHor-ccn")
+dimpler(data,"dimpleAreaHorCard-ccn")
+dimpler(data,"dimpleAreaHorNrm-ccn")
+dimpler(data,"dimpleAreaHorNrmCard-ccn")
+dimpler(data,"dimpleAreaVer-ccn")
+dimpler(data,"dimpleAreaVerCard-ccn")
+dimpler(data,"dimpleAreaVerNrm-ccn")
+dimpler(data,"dimpleAreaVerNrmCard-ccn")
+
 data <- read.csv("inst/data/dataCCN1.csv")
 
 dimpler(data,"dimpleAreaHorFac-ccn")
@@ -52,15 +86,7 @@ dimpler(data, "dimpleBarHor-cn")
 dimpler(data, "dimpleBarVer-cn")
 
 
-data <- read.csv("inst/data/dataCCC.csv")
-dimpler(data, "dimplePoints-ccc")
-dimpler(data, "dimpleMatrix-ccc")
-dimpler(data[c(3,2,1)], "dimpleMatrix-ccc")
-dimpler(data[c(2,3,1)], "dimpleMatrix-ccc")
-dimpler(data[c(3,1,2)], "dimpleMatrix-ccc")
-dimpler(data[c(1,3,2)], "dimpleMatrix-ccc")
-dimpler(data[c(1,2,3)], "dimpleMatrix-ccc")
-dimpler(data[c(2,1,3)], "dimpleMatrix-ccc")
+
 
 data <- read.csv("inst/data/dataCCN1.csv")
 dimpler(data,"dimpleAreaHorFac-ccn")
