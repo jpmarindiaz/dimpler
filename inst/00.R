@@ -11,6 +11,9 @@ library(dimpler)
 data <- read.csv("inst/data/dataCCCN.csv")
 dimpler(data, "dimpleBubble-cccn")
 dimpler(data[c(3,1,2,4)], "dimpleBubble-cccn")
+dimpler(data[c(3,1,2,4)], "dimplePie-cccn")
+dimpler(data, "dimplePie-cccn")
+dimpler(data[c(3,2,1,4)], "dimplePie-cccn")
 
 
 data <- read.csv("inst/data/dataCCC.csv")
