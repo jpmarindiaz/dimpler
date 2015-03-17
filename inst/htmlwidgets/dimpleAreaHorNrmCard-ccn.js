@@ -22,6 +22,7 @@ HTMLWidgets.widget({
     myChart.setMargins("15%", "15%", "15%", "15%");
     
     var x = myChart.addCategoryAxis("x", [colNames[1]]);
+    x.addOrderRule(colNames[1]);
     myChart.addPctAxis("y", colNames[2]);
     var s = myChart.addSeries(colNames[0], dimple.plot.area);
     s.barGap = 0.05;

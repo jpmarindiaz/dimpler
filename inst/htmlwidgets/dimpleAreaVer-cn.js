@@ -24,6 +24,7 @@ HTMLWidgets.widget({
     
     var x = myChart.addCategoryAxis("x",colNames[0]);
     var y = myChart.addMeasureAxis("y", colNames[1]);
+    y.addOrderRule(colNames[1]);
     myChart.addSeries(null, dimple.plot.area);
 
     myChart.draw();

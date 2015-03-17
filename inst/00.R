@@ -3,6 +3,8 @@ library(devtools)
 library(htmlwidgets)
 
 
+library(plyr)
+
 devtools::install()
 library(dimpler)
 

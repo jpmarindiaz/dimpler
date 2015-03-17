@@ -22,6 +22,7 @@ HTMLWidgets.widget({
     myChart.setMargins("15%", "15%", "15%", "15%");
 
     var x = myChart.addCategoryAxis("x", [colNames[0],colNames[1]]);
+    x.addOrderRule(colNames[1]);
     // x.addGroupOrderRule(colNames[0]);
     myChart.addMeasureAxis("y", colNames[2]);
     var s = myChart.addSeries(colNames[0], dimple.plot.area);
