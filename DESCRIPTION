@@ -1,11 +1,11 @@
 Package: dimpler
 Type: Package
-Title: Interface to dimple.js object-oriented API for business analytics
-Version: 1.0
+Title: Wrapper around rcdimple package (dimple.js)
+Version: 0.1
 Date: 2015-03-05
 Author: Juan Pablo Marín Díaz
 Maintainer: Juan Pablo Marín Díaz <jpmarindiaz@gmail.com>
-Description: Interface to dimple.js object-oriented API for business analytics
+Description: Wrapper around rcdimple package (dimple.js)
 License: MIT + file LICENSE
 Imports:
-    htmlwidgets (>= 0.3), yaml
+    htmlwidgets (>= 0.3), yaml, rcdimple, tblpkg
